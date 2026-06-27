@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Moringa Habana</title>
+    <meta name="description" content="Contáctanos para conocer más sobre nuestros productos de moringa. Redes sociales y ubicación en La Habana.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="frontend/css/styles.css">
+    <link rel="stylesheet" href="frontend/css/contacto.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="resources/img/logo.png" alt="Moringa Habana">
+                <div>
+                    <h1>Moringa Habana</h1>
+                    <span>El árbol milagroso</span>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Menú">☰</button>
+            
+            <nav class="nav">
+                <a href="index.html" data-page="inicio">Inicio</a>
+                <a href="catalogo.html" data-page="catalogo">Catálogo</a>
+                <a href="contacto.html" data-page="contacto" class="active">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="seccion-contacto">
+        <div class="container">
+            <div class="header-contacto">
+                <h1>📞 Contáctanos</h1>
+                <p>Estamos aquí para ayudarte. Elige tu canal preferido</p>
+            </div>
+            
+            <div class="contacto-grid">
+                <!-- Panel izquierdo: Redes sociales -->
+                <div class="contacto-panel">
+                    <h2>📱 Redes sociales</h2>
+                    <div class="redes-list">
+                        <div class="red-item">
+                            <span class="icono">📱</span>
+                            <span class="red-nombre">WhatsApp</span>
+                            <span class="red-usuario">+53 5XXX-XXXX</span>
+                            <a href="#" class="btn-contactar" data-red-social="whatsapp">Contactar</a>
+                        </div>
+                        <div class="red-item">
+                            <span class="icono">💬</span>
+                            <span class="red-nombre">Telegram</span>
+                            <span class="red-usuario">@moringahabana</span>
+                            <a href="#" class="btn-contactar" data-red-social="telegram">Contactar</a>
+                        </div>
+                        <div class="red-item">
+                            <span class="icono">📸</span>
+                            <span class="red-nombre">Instagram</span>
+                            <span class="red-usuario">@moringahabana</span>
+                            <a href="#" class="btn-contactar" data-red-social="instagram">Contactar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="canal-whatsapp">
+                        <h3>📢 Únete a nuestro canal</h3>
+                        <p>Entérate de nuevas promociones y productos exclusivos</p>
+                        <a href="#" class="btn-unirse" data-red-social="canal">💬 Unirme al canal de WhatsApp</a>
+                    </div>
+                </div>
+                
+                <!-- Panel derecho: Mapa -->
+                <div class="contacto-panel">
+                    <h2>📍 Ubicación</h2>
+                    <div id="mapa-container">
+                        <!-- Renderizado por Leaflet -->
+                    </div>
+                    <div class="direccion-info">
+                        <p class="direccion"><strong>📌 Dirección:</strong> Calle 123 #456 entre A y B, La Habana, Cuba</p>
+                        <div class="horario">
+                            <p><strong>🕐 Horario de atención:</strong></p>
+                            <p><span class="dia">Lunes a Viernes:</span> 9:00 AM - 6:00 PM</p>
+                            <p><span class="dia">Sábados:</span> 9:00 AM - 1:00 PM</p>
+                            <p><span class="dia">Domingos:</span> <span class="cerrado">Cerrado</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>🌿 Moringa Habana</h3>
+                    <p>El árbol milagroso al alcance de tu mano</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.7;">Productos 100% naturales</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <a href="index.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div>
+                    <h4>Síguenos</h4>
+                    <div class="footer-social">
+                        <a href="#" title="WhatsApp" data-red-social="whatsapp">📱</a>
+                        <a href="#" title="Telegram" data-red-social="telegram">💬</a>
+                        <a href="#" title="Instagram" data-red-social="instagram">📸</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Moringa Habana - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Scripts -->
+    <script src="backend/data.js"></script>
+    <script src="backend/script.js"></script>
+    <script src="backend/contacto.js"></script>
+    <script src="frontend/scripts/main.js"></script>
+    <script src="frontend/scripts/contacto.js"></script>
+</body>
+</html>

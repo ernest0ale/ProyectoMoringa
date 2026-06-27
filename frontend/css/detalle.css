@@ -1,0 +1,266 @@
+/* ============================================
+   ESTILOS DE DETALLE - MORINGA HABANA
+   ============================================ */
+
+.seccion-detalle {
+    padding: var(--spacing-xl) 0;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+}
+
+.btn-volver:hover {
+    background: var(--color-light);
+    transform: translateX(-4px);
+}
+
+/* ========== DETALLE GRID ========== */
+.detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Imagen */
+.detalle-imagen {
+    background: var(--color-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.detalle-imagen .badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detalle-imagen .badge.agotado {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+.detalle-imagen .badge.disponible {
+    background: var(--color-success);
+    color: var(--color-white);
+}
+
+/* Información */
+.detalle-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.detalle-info h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.detalle-info .estado {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.detalle-info .estado.disponible {
+    color: var(--color-success);
+}
+
+.detalle-info .estado.no-disponible {
+    color: var(--color-danger);
+}
+
+.detalle-info .precio-detalle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    padding: var(--spacing-sm) 0;
+}
+
+.detalle-info .rating {
+    font-size: 1.2rem;
+}
+
+.detalle-info .descripcion {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.detalle-info .presentacion {
+    background: var(--color-light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .detalle-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .detalle-imagen {
+        min-height: 300px;
+    }
+    
+    .detalle-imagen img {
+        min-height: 300px;
+    }
+    
+    .detalle-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .detalle-info .precio-detalle {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========== SECCIONES EXTRAS ========== */
+.detalle-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.detalle-seccion {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.detalle-seccion h2 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.detalle-seccion ul li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.detalle-seccion ul li:last-child {
+    border-bottom: none;
+}
+
+.detalle-seccion ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.detalle-seccion ul li.aviso {
+    color: var(--color-danger);
+    font-weight: 500;
+}
+
+.detalle-seccion ul li.aviso::before {
+    content: '⚠️';
+    color: var(--color-warning);
+}
+
+@media (max-width: 768px) {
+    .detalle-extra {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+/* ========== ACCIONES ========== */
+.acciones-producto {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.acciones-producto .btn {
+    padding: 12px 28px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-ubicacion {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-ubicacion:hover {
+    background: var(--color-secondary);
+}
+
+.btn-contacto {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-contacto:hover {
+    background: var(--color-primary);
+}
+
+/* ========== PRODUCTOS RELACIONADOS ========== */
+.productos-relacionados {
+    margin-top: var(--spacing-2xl);
+}
+
+.productos-relacionados h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.productos-relacionados .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 480px) {
+    .productos-relacionados .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-sm);
+    }
+}

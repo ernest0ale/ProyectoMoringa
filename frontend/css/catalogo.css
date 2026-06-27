@@ -1,0 +1,189 @@
+/* ============================================
+   ESTILOS DE CATÁLOGO - MORINGA HABANA
+   ============================================ */
+
+.seccion-catalogo {
+    padding: var(--spacing-2xl) 0;
+}
+
+.seccion-catalogo .header-catalogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.seccion-catalogo .header-catalogo h1 {
+    font-size: 2.5rem;
+}
+
+.seccion-catalogo .header-catalogo .contador {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* ========== FILTROS ========== */
+.filtros-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.filtros-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-right: var(--spacing-sm);
+}
+
+.filtro-btn {
+    padding: 6px 16px;
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.filtro-btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.filtro-btn.activo {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* ========== BÚSQUEDA ========== */
+.search-catalogo {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.search-catalogo input {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 18px;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    transition: var(--transition-base);
+}
+
+.search-catalogo input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 4px rgba(196, 160, 0, 0.1);
+}
+
+.search-catalogo .btn-buscar {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-base);
+}
+
+.search-catalogo .btn-buscar:hover {
+    background: var(--color-primary);
+}
+
+/* ========== GRID DE PRODUCTOS EN CATÁLOGO ========== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* ========== ORDENAR ========== */
+.ordenar-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.ordenar-container label {
+    font-weight: 500;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.ordenar-select {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.ordenar-select:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .seccion-catalogo .header-catalogo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .seccion-catalogo .header-catalogo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .filtros-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filtros-container .filtros-label {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .search-catalogo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-catalogo input {
+        max-width: 100%;
+    }
+    
+    .ordenar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-sm);
+    }
+}

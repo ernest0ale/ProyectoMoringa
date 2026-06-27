@@ -1,0 +1,292 @@
+/* ============================================
+   ESTILOS DE INICIO - MORINGA HABANA
+   ============================================ */
+
+/* ========== HERO ========== */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    color: var(--color-white);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '🌿';
+    position: absolute;
+    font-size: 20rem;
+    opacity: 0.05;
+    right: -5%;
+    bottom: -20%;
+    transform: rotate(-10deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: var(--color-secondary);
+}
+
+.hero .subtitulo {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.hero .frase {
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-xl);
+    opacity: 0.8;
+    padding: var(--spacing-md);
+    border-top: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.hero .btn-explorar {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 16px 40px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.hero .btn-explorar:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--spacing-2xl) 0;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitulo {
+        font-size: 1rem;
+    }
+    
+    .hero .frase {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========== SECCIÓN BENEFICIOS ========== */
+.seccion-beneficios {
+    padding: var(--spacing-2xl) 0;
+}
+
+.seccion-beneficios .header-seccion {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.seccion-beneficios .header-seccion h2 {
+    font-size: 2.5rem;
+}
+
+.seccion-beneficios .header-seccion p {
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.beneficio-card {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.beneficio-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.beneficio-card h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.beneficio-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ========== SECCIÓN PRODUCTOS DESTACADOS ========== */
+.seccion-productos {
+    padding: var(--spacing-2xl) 0;
+    background: var(--color-white);
+}
+
+.seccion-productos .header-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.seccion-productos .header-seccion h2 {
+    font-size: 2rem;
+}
+
+.seccion-productos .header-seccion .btn-ver-todos {
+    color: var(--color-secondary);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--radius-full);
+    transition: var(--transition-base);
+}
+
+.seccion-productos .header-seccion .btn-ver-todos:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+    .seccion-productos .header-seccion {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ========== SECCIÓN TESTIMONIOS ========== */
+.seccion-testimonios {
+    padding: var(--spacing-2xl) 0;
+    background: var(--color-light);
+}
+
+.seccion-testimonios .header-seccion {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.seccion-testimonios .header-seccion h2 {
+    font-size: 2rem;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.testimonio-card {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.testimonio-card .avatar {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.testimonio-card .texto {
+    font-style: italic;
+    color: #555;
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonio-card .autor {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.testimonio-card .estrellas {
+    color: var(--color-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ========== CTA FINAL ========== */
+.cta-final {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    color: var(--color-white);
+    border-radius: var(--radius-xl);
+    margin: var(--spacing-2xl) 0;
+}
+
+.cta-final h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-final p {
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-final .btn {
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 14px 36px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: var(--transition-base);
+}
+
+.cta-final .btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
